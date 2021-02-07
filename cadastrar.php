@@ -1,5 +1,19 @@
 <?php include "cabecalho.php" ?>
 
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Cadastro de Filmes</title>
+</head>
 <body>
 <nav class="nav-extended purple lighten-3">
     <div class="nav-wrapper">
@@ -20,7 +34,8 @@
   </nav>
 
   <div class="row">
-    <form action="inserirFilme.php" method="POST">
+
+    <form method="POST">
     <div class="col s6 offset-s3">
         <div class="card">
             <div class="card-content">
@@ -42,12 +57,17 @@
                         <label for="sinopse">Sinopse</label>
                         </div>
                     </div>
+
+                    </form>
+
                 </div>
 
                 <!-- input nota-->
                 <div class="row">
                     <div class="input-field col s4">
+
                         <input id="nota" name="nota" type="number" step=".1" min=0 max=10 class="validate" required>
+
                         <label for="nota">Nota</label>
                     </div>
                 </div>
@@ -56,6 +76,7 @@
                 <div class="file-field input-field">
                     <div class="btn purple lighten-2 black-text">
                         <span>Capa</span>
+
                         <input type="file" >
                     </div>
                     <div class="file-path-wrapper">
@@ -65,6 +86,7 @@
 
             <div class="card-action">
                 <a class="btn waves-effect waves-light grey" href="#">Cancelar</a>
+
                 <button type="submit" class="waves-effect waves-light btn purple">Confirmar</button>
             </div>
         </div>
@@ -73,3 +95,10 @@
   </form>
   </div>
 </body>
+
+                <a href="#" class="waves-effect waves-light btn purple">Confirmar</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
