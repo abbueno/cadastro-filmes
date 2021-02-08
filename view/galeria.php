@@ -2,19 +2,17 @@
 
 <?php
 session_start();
+require "../util/Mensagem.php";
 
-require "./repository/FilmesRepositoryPDO.php";
-require "./util/Mensagem.php";
-
-$filmesRepository = new FilmesRepositoryPDO();
-$filmes = $filmesRepository->listarTodos();
+$controller = new FilmesController();
+$filmes = $controller->index();
 ?>
 
 <body>
 <nav class="nav-extended purple lighten-3">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
-        <li class="active" ><a href="/">Galeria</a></li>
+        <li class="active" ><a href="galeria.php">Galeria</a></li>
         <li><a href="cadastrar.php">Cadastrar</a></li>        
       </ul>      
     </div>

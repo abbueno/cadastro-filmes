@@ -1,41 +1,21 @@
 <?php include "cabecalho.php" ?>
 
-<!DOCTYPE html>
-<html lang="pr-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Cadastro de Filmes</title>
-</head>
 <body>
 <nav class="nav-extended purple lighten-3">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right">
         <li><a href="galeria.php">Galeria</a></li>
-        <li><a href="cadastrar.php">Cadastrar</a></li>        
+        <li class="active"><a href="/novo">Cadastrar</a></li>        
       </ul>      
     </div>
-    <div class="nav.header center"><h1>Cadastro de Filmes</h1>
-    </div>   
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent purple darken-1">
-        <li class="tab"><a class="active" href="#test1">Todos</a></li>
-        <li class="tab"><a href="#test2">Assistidos</a></li>
-        <li class="tab"><a href="#test3">Favoritos</a></li>
-      </ul>
+    <div class="nav.header center">
+        <h1>Cadastro de Filmes</h1>
     </div>
-  </nav>
+    </nav>
+    
 
   <div class="row">
-
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
     <div class="col s6 offset-s3">
         <div class="card">
             <div class="card-content">
@@ -57,17 +37,12 @@
                         <label for="sinopse">Sinopse</label>
                         </div>
                     </div>
-
-                    </form>
-
                 </div>
 
                 <!-- input nota-->
                 <div class="row">
                     <div class="input-field col s4">
-
                         <input id="nota" name="nota" type="number" step=".1" min=0 max=10 class="validate" required>
-
                         <label for="nota">Nota</label>
                     </div>
                 </div>
@@ -76,17 +51,15 @@
                 <div class="file-field input-field">
                     <div class="btn purple lighten-2 black-text">
                         <span>Capa</span>
-
-                        <input type="file" >
+                        <input type="file" name="poster_file">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" name="poster">
                     </div>
-                    </div>
+                </div>
 
             <div class="card-action">
                 <a class="btn waves-effect waves-light grey" href="#">Cancelar</a>
-
                 <button type="submit" class="waves-effect waves-light btn purple">Confirmar</button>
             </div>
         </div>
@@ -95,10 +68,3 @@
   </form>
   </div>
 </body>
-
-                <a href="#" class="waves-effect waves-light btn purple">Confirmar</a>
-            </div>
-        </div>
-    </div>
-  </div>
-
